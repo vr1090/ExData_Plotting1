@@ -9,4 +9,3 @@ png(filename ="plot1.png" )
 hist(data_global_kw,main = "Global Active Power",col=c("red"),xlab = "Global Active Power (kilowatts)")
 dev.off()
 #end of historgram code
-#add on something else
