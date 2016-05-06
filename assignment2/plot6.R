@@ -7,7 +7,7 @@ library(ggplot2)
 comparatorData <- subset(summarySCC,  fips %in% c("24510","06037") & type=="ON-ROAD")
 
 comparatorData <- aggregate(comparatorData$Emissions,by=list(comparatorData$year,
-                                                             comparatorData$fips), FUN=sum )
+                                                             comparatorData$fips), FUN=mean )
 
 #prepare naming first..
 names(comparatorData) <- c("year","fips","emission")

@@ -4,7 +4,7 @@ clasification <- readRDS("Source_Classification_Code.rds")
 library(ggplot2)
 summarySCC2 <- subset(summarySCC,subset = summarySCC$fips=="24510")
 
-dataTampil<-aggregate(summarySCC2$Emissions, by=list(summarySCC2$type,summarySCC2$year),FUN=sum)
+dataTampil<-aggregate(summarySCC2$Emissions, by=list(summarySCC2$type,summarySCC2$year),FUN=mean)
 
 names(dataTampil) <- c("type","year","emission")
 

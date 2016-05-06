@@ -7,7 +7,7 @@ summarySCC2 <- merge(summarySCC,clasification,by = "SCC")
 coalData <- grep( "coal", summarySCC2$Short.Name,ignore.case = T)
 summarySCC2 <- summarySCC2[coalData,]
 
-dataTampil<-aggregate(summarySCC2$Emissions, by=list(summarySCC2$year),FUN=sum)
+dataTampil<-aggregate(summarySCC2$Emissions, by=list(summarySCC2$year),FUN=mean)
 
 names(dataTampil) <- c("year","emission")
 
